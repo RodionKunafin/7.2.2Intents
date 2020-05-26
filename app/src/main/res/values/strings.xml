@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">7.2.2Intents</string>
+    <string name="phoneText">Введите номер телефона</string>
+    <string name="btnCall">Звоним</string>
+    <string name="smsText">Введите текст смс</string>
+    <string name="btnSms">Отправляем смс</string>
+    <string name="phoneNumberForSms">Введите номер телефона для отправки смс</string>
+</resources>
