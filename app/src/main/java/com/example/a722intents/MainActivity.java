@@ -61,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
+            case MY_PERMISSIONS_SEND_SMS: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    sendSms();
+                } else {
+                    finish();
+                }
+            }
             case MY_PERMISSIONS_REQUEST_CALL_PHONE: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     callByNumber();
@@ -84,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void onRequestPermissionsResultToSms(int requestCode, String[] permissions, int[] grantResults) {
+    /*public void onRequestPermissionsResultToSms(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case MY_PERMISSIONS_SEND_SMS: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -94,5 +101,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-    }
+    }*/
 }
